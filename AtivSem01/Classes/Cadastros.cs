@@ -33,17 +33,17 @@ namespace AtivSem01.Classes
         {
             protected bool Conexao; //Propriedade protegida chamada: Conexao
 
-            public void Inserir()
+            public virtual void Inserir()
             {
-                Console.Write("Arquivo Inserido!");
+                Console.Write("Arquivo Inserido! ");
             }
             public void Alterar()
             {
 
             }
-            public void Deletar()
+            public virtual void Deletar()
             {
-                Console.Write("Arquivo Deletado!");
+                Console.Write("Arquivo Deletado! ");
             }
             public void Pesquisar()
             {
@@ -61,10 +61,10 @@ namespace AtivSem01.Classes
 
             /* O método Deletar deve sofrer sobrecarga na Classe Clientes, executando o código da Classe Superior
             e incluindo algo novo. */
-            public void Deletar(string cliente)
+            public override void Deletar()
             {
-                Console.Write("Arquivo Deletado! ");
-                Console.WriteLine("O Cliente "+cliente+" foi deletado com sucesso!");
+                base.Deletar();
+                Console.WriteLine("O Cliente foi deletado com sucesso!");
             }
         }
 
@@ -78,17 +78,17 @@ namespace AtivSem01.Classes
 
             /* O método Inserir deve sofrer sobrecarga na classe Pedidos, desconsiderando a implementação do método da
             classe Superior */
-            public void Inserir(int pedido)
+            public override void Inserir()
             {
-                Console.WriteLine($"Pedido {pedido} foi inserido com sucesso!");
+                Console.WriteLine("Pedido foi inserido com sucesso!");
             }
 
             /* O método Deletar deve sofrer sobrecarga na Classe Pedidos, executando o código da Classe Superior
             e incluindo algo novo */
-            public void Deletar(int pedido)
+            public override void Deletar()
             {
-                Console.Write("Arquivo Deletado! ");
-                Console.WriteLine("O Pedido "+pedido + " foi deletado com sucesso!");
+                base.Deletar();
+                Console.WriteLine("O Pedido foi deletado com sucesso!");
             }
         }
     }
