@@ -35,13 +35,13 @@ namespace AtivSem01
             Console.WriteLine("3 - MÉTODOS DE CLIENTES E PEDIDOS (Exemplos)");
 
             Console.Write("Método Deletar - Classe Clientes: ");
-            cliente.Deletar();
+            cliente.Deletar("Rafael");
 
             Console.Write("Método Deletar - Classe Pedidos: ");
-            pedidos.Deletar();
+            pedidos.Deletar(2);
 
             Console.Write("Método Inserir - Classe Pedidos: ");
-            pedidos.Inserir();
+            pedidos.Inserir(3);
 
             Console.ReadKey();
         }
